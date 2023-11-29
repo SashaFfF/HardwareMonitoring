@@ -1,0 +1,12 @@
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\bin\Debug\net7.0\HardwareMonitoringLibrary.deps.json
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\bin\Debug\net7.0\HardwareMonitoringLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\bin\Debug\net7.0\HardwareMonitoringLibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.csproj.AssemblyReference.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.AssemblyInfoInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.AssemblyInfo.cs
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.csproj.CoreCompileInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\refint\HardwareMonitoringLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\ref\HardwareMonitoringLibrary.dll
