@@ -1,0 +1,9 @@
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\obj\Debug\BatteryLibrary.csproj.AssemblyReference.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\obj\Debug\BatteryLibrary.csproj.CoreCompileInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\bin\Debug\BatteryLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\bin\Debug\BatteryLibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\bin\Debug\System.CodeDom.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\bin\Debug\System.CodeDom.xml
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\obj\Debug\BatteryLibrary.csproj.CopyComplete
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\obj\Debug\BatteryLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\obj\Debug\BatteryLibrary.pdb

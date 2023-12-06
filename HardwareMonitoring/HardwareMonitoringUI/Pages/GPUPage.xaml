@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareMonitoringUI.Pages.GPUPage"
+             Title="GPUPage">
+    <StackLayout Margin="20">
+
+        <Label Text="GPU Information"
+               FontSize="24"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,0,20"/>
+
+        <Grid ColumnSpacing="4" RowSpacing="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="3" HasShadow="True">
+                <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="18" />
+            </Frame>
+
+            <Frame Grid.Row="2" Grid.Column="0" CornerRadius="3" HasShadow="False">
+                <Label Text="CurrentRefreshRate:" VerticalOptions="Center" />
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="1" CornerRadius="3" HasShadow="False">
+                <Label Text="{Binding CurrentRefreshRate,  StringFormat='{0} Hz'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+            </Frame>
+
+            
+        </Grid>
+    </StackLayout>
+</ContentPage>

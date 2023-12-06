@@ -10,3 +10,4 @@ D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Deb
 D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\refint\HardwareMonitoringLibrary.dll
 D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.pdb
 D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\ref\HardwareMonitoringLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\obj\Debug\net7.0\HardwareMonitoringLibrary.csproj.ResolveComReference.cache

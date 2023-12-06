@@ -49,9 +49,9 @@
               "target": "Package",
               "version": "[0.9.2, )"
             },
-            "OpenHardwareMonitor": {
+            "Microsoft.Windows.Compatibility": {
               "target": "Package",
-              "version": "[0.9.6, )"
+              "version": "[8.0.0, )"
             },
             "System.Management": {
               "target": "Package",

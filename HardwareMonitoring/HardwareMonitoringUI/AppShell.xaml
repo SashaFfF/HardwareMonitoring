@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HardwareMonitoringUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HardwareMonitoringUI"
+    xmlns:pages="clr-namespace:HardwareMonitoringUI.Pages"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <FlyoutItem Title="Menu">
+        <!--<Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>-->
+        <Tab Title="CPU" >
+            <ShellContent ContentTemplate="{DataTemplate pages:CPUPage}" />
+        </Tab>
+        <Tab Title="SSD" >
+            <ShellContent ContentTemplate="{DataTemplate pages:SSDPage}" />
+        </Tab>
+        <Tab Title="RAM" >
+            <ShellContent ContentTemplate="{DataTemplate pages:RAMPage}" />
+        </Tab>
+        <Tab Title="GPU" >
+            <ShellContent ContentTemplate="{DataTemplate pages:GPUPage}" />
+        </Tab>
+        <Tab Title="Battery" >
+            <ShellContent ContentTemplate="{DataTemplate pages:Battery}" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

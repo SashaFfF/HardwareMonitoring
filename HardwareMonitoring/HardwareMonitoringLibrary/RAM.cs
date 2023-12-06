@@ -12,42 +12,61 @@ namespace HardwareMonitoringLibrary
         private static ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
         private static ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
 
-        private static ulong TotalMemory;
-        private static ulong FreeMemory;
-        private static ulong LoadedMemory;
+        public double TotalMemory { get; set; }
+        public double FreeMemory { get; set; }
+        public double LoadedMemory { get; set; }
+        public double MemoryLoadPercentage { get; set; }
 
-        private static void UpdateMemoryInfo()
+        public RAM() 
+        {
+            GetTotalInfo();
+        }
+
+        public  void UpdateMemoryInfo()
         {
             foreach (ManagementObject info in searcher.Get())
             {
-                TotalMemory = Convert.ToUInt64(info["TotalVisibleMemorySize"]);
-                FreeMemory = Convert.ToUInt64(info["FreePhysicalMemory"]);
-                LoadedMemory = TotalMemory - FreeMemory;
+                FreeMemory = Math.Round((Convert.ToDouble(info["FreePhysicalMemory"]) / (1024.0 * 1024.0)), 1);
+                LoadedMemory = Math.Round(TotalMemory - FreeMemory, 1);
+                MemoryLoadPercentage =Math.Round(Convert.ToDouble(LoadedMemory) / Convert.ToDouble(TotalMemory) * 100, 1);
             }
         }
 
-        public static ulong GetTotalMemory()
+        public void GetTotalInfo()
+        {
+            foreach (ManagementObject info in searcher.Get())
+            {
+                TotalMemory = Math.Round((Convert.ToDouble(info["TotalVisibleMemorySize"]) / (1024.0 * 1024.0)), 1);
+                FreeMemory = Math.Round((Convert.ToDouble(info["FreePhysicalMemory"]) / (1024.0 * 1024.0)), 1);
+                LoadedMemory = Math.Round(TotalMemory - FreeMemory, 1);
+                MemoryLoadPercentage = Math.Round(Convert.ToDouble(LoadedMemory) / Convert.ToDouble(TotalMemory) * 100, 1);
+            }
+        }
+
+        /*
+        public double GetTotalMemory()
         {
             UpdateMemoryInfo();
             return TotalMemory;
         }
 
-        public static ulong GetFreeMemory()
+        public double GetFreeMemory()
         {
             UpdateMemoryInfo(); 
             return FreeMemory;
         }
 
-        public static double GetMemoryLoadPercentage()
+        public double GetMemoryLoadPercentage()
         {
             UpdateMemoryInfo();
             return Convert.ToDouble(LoadedMemory) / Convert.ToDouble(TotalMemory) * 100;  
         }
 
-        public static ulong GetLoadedMemory()
+        public double GetLoadedMemory()
         {
             UpdateMemoryInfo();
             return LoadedMemory;
         }
+        */
     }
 }

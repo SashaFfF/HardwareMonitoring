@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareMonitoringLibrary", "HardwareMonitoringLibrary\HardwareMonitoringLibrary.csproj", "{9177979F-8972-46B8-A0D0-6AD2AF37EF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareMonitoringLibrary", "HardwareMonitoringLibrary\HardwareMonitoringLibrary.csproj", "{9177979F-8972-46B8-A0D0-6AD2AF37EF6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingHardwareMonitoring", "..\TestingHardwareMonitoring\TestingHardwareMonitoring.csproj", "{6C75BE60-17B0-40EF-8DF5-6782B07321D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingHardwareMonitoring", "..\TestingHardwareMonitoring\TestingHardwareMonitoring.csproj", "{6C75BE60-17B0-40EF-8DF5-6782B07321D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareMonitoringUI", "HardwareMonitoringUI\HardwareMonitoringUI.csproj", "{5BAD2B59-D7C0-4A62-8AC7-09436354C167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryLibrary", "BatteryLibrary\BatteryLibrary.csproj", "{5C5E1C1C-9480-44C7-B859-E5B4F7196D1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,16 @@ Global
 		{6C75BE60-17B0-40EF-8DF5-6782B07321D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C75BE60-17B0-40EF-8DF5-6782B07321D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C75BE60-17B0-40EF-8DF5-6782B07321D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAD2B59-D7C0-4A62-8AC7-09436354C167}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5C5E1C1C-9480-44C7-B859-E5B4F7196D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5E1C1C-9480-44C7-B859-E5B4F7196D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5E1C1C-9480-44C7-B859-E5B4F7196D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5E1C1C-9480-44C7-B859-E5B4F7196D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
