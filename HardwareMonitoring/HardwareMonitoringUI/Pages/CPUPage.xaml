@@ -33,7 +33,7 @@
             </Grid.ColumnDefinitions>
 
             <Frame Grid.Row="1" Grid.Column="0" CornerRadius="3" HasShadow="True">
-                <Label Text="CPU Name:" VerticalOptions="Center" />
+                <Label Text="CPU:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="1" Grid.Column="1" CornerRadius="3" HasShadow="False">
                 <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource PrimaryColor}"/>
@@ -64,14 +64,14 @@
                 <Label Text="Использование:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="5" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding OccupancyPercentage, StringFormat='{0}%'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="OccupancyPercentageLabel" Text="{Binding OccupancyPercentage, StringFormat='{0}%'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
             <Frame Grid.Row="6" Grid.Column="0" CornerRadius="3" HasShadow="False">
                 <Label Text="Температура:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="6" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding Temperature, StringFormat='{0} °C'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="TemperatureLabel" Text="{Binding Temperature}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
         </Grid>
     </StackLayout>

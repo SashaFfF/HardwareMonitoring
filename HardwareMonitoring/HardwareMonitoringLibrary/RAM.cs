@@ -22,14 +22,19 @@ namespace HardwareMonitoringLibrary
             GetTotalInfo();
         }
 
-        public  void UpdateMemoryInfo()
+        public async 
+        Task
+UpdateMemoryInfoAsync()
         {
-            foreach (ManagementObject info in searcher.Get())
+            await Task.Run(() =>
             {
-                FreeMemory = Math.Round((Convert.ToDouble(info["FreePhysicalMemory"]) / (1024.0 * 1024.0)), 1);
-                LoadedMemory = Math.Round(TotalMemory - FreeMemory, 1);
-                MemoryLoadPercentage =Math.Round(Convert.ToDouble(LoadedMemory) / Convert.ToDouble(TotalMemory) * 100, 1);
-            }
+                foreach (ManagementObject info in searcher.Get())
+                {
+                    FreeMemory = Math.Round((Convert.ToDouble(info["FreePhysicalMemory"]) / (1024.0 * 1024.0)), 1);
+                    LoadedMemory = Math.Round(TotalMemory - FreeMemory, 1);
+                    MemoryLoadPercentage = Math.Round(Convert.ToDouble(LoadedMemory) / Convert.ToDouble(TotalMemory) * 100, 1);
+                }
+            });
         }
 
         public void GetTotalInfo()

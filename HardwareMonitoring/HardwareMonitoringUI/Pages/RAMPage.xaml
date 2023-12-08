@@ -37,21 +37,21 @@
                 <Label Text="Используется:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="2" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding LoadedMemory, StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="LoadedMemoryLabel" Text="{Binding LoadedMemory, StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
             <Frame Grid.Row="3" Grid.Column="0" CornerRadius="3" HasShadow="False">
                 <Label Text="Доступно:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="3" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding FreeMemory, StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="FreeMemoryLabel" Text="{Binding FreeMemory, StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
             <Frame Grid.Row="4" Grid.Column="0" CornerRadius="3" HasShadow="False">
                 <Label Text="Процент использования:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="4" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding MemoryLoadPercentage, StringFormat='{0} %'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="MemoryLoadPercentageLabel" Text="{Binding MemoryLoadPercentage, StringFormat='{0} %'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
         </Grid>
     </StackLayout>

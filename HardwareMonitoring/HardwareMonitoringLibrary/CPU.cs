@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Management;
 using System.Text;
@@ -10,9 +11,9 @@ namespace HardwareMonitoringLibrary
 {
     public class CPU
     {
-        private static ObjectQuery query;
-        private static ManagementObjectSearcher searcher;
-        private static Computer computer;
+        private ObjectQuery query;
+        private ManagementObjectSearcher searcher;
+        private Computer computer;
 
         public string Name { get; set; }
         public int NumberOfCores { get; set; }
@@ -20,6 +21,7 @@ namespace HardwareMonitoringLibrary
         public double Frequency { get; set; }
         public int OccupancyPercentage { get; set; }
         public double Temperature { get; set; }
+
 
         public CPU()
         {
@@ -31,8 +33,11 @@ namespace HardwareMonitoringLibrary
             };
 
             GetTotalInfo();
-            GetOccupancyPercentage();
-            GetTemperature();
+            Task.Run(async () =>
+            {
+                await GetOccupancyPercentageAsync();
+                await GetTemperatureAsync();
+            }).Wait();
         }
 
         public void GetTotalInfo() {
@@ -95,45 +100,105 @@ namespace HardwareMonitoringLibrary
 
             return -1;
         }
-
-        public void GetTemperature()
+        public async Task UpdateInfoAsync()
         {
-            computer.Open();
-            computer.Accept(new UpdateVisitor());
+            // Вызываем асинхронные методы напрямую
+            await GetTemperatureAsync();
+            await GetOccupancyPercentageAsync();
+        }
 
-            foreach (IHardware hardware in computer.Hardware)
+        public async Task GetTemperatureAsync()
+        {
+            await Task.Run(() =>
             {
+                computer.Open();
+                computer.Accept(new UpdateVisitor());
 
-                foreach (ISensor sensor in hardware.Sensors)
+                foreach (IHardware hardware in computer.Hardware)
                 {
-                    if (sensor.SensorType == SensorType.Temperature) 
+                    foreach (ISensor sensor in hardware.Sensors)
                     {
-                        Temperature = sensor.Value ?? 0;
+                        if (sensor.SensorType == SensorType.Temperature)
+                        {
+                            Temperature = sensor.Value ?? 0;
+                        }
                     }
                 }
-            }
 
-            computer.Close();
+                computer.Close();
+            });
         }
-        public void GetOccupancyPercentage()
+
+        public async Task GetOccupancyPercentageAsync()
         {
-            computer.Open();
-            computer.Accept(new UpdateVisitor());
-
-            foreach (IHardware hardware in computer.Hardware)
+            await Task.Run(() =>
             {
+                computer.Open();
+                computer.Accept(new UpdateVisitor());
 
-                foreach (ISensor sensor in hardware.Sensors)
+                foreach (IHardware hardware in computer.Hardware)
                 {
-                    if (sensor.SensorType == SensorType.Load)
+                    foreach (ISensor sensor in hardware.Sensors)
                     {
-                        OccupancyPercentage =Convert.ToInt32(sensor.Value ?? 0);
+                        if (sensor.SensorType == SensorType.Load)
+                        {
+                            OccupancyPercentage = Convert.ToInt32(sensor.Value ?? 0);
+                        }
                     }
                 }
-            }
 
-            computer.Close();
+                computer.Close();
+            });
         }
+
+
+
+
+
+        //public void UpdateInfo()
+        //{
+        //    GetTemperature();
+        //    GetOccupancyPercentage();
+        //}
+
+        //public void GetTemperature()
+        //{
+        //    computer.Open();
+        //    computer.Accept(new UpdateVisitor());
+
+        //    foreach (IHardware hardware in computer.Hardware)
+        //    {
+
+        //        foreach (ISensor sensor in hardware.Sensors)
+        //        {
+        //            if (sensor.SensorType == SensorType.Temperature) 
+        //            {
+        //                Temperature = sensor.Value ?? 0;
+        //            }
+        //        }
+        //    }
+
+        //    computer.Close();
+        //}
+        //public void GetOccupancyPercentage()
+        //{
+        //    computer.Open();
+        //    computer.Accept(new UpdateVisitor());
+
+        //    foreach (IHardware hardware in computer.Hardware)
+        //    {
+
+        //        foreach (ISensor sensor in hardware.Sensors)
+        //        {
+        //            if (sensor.SensorType == SensorType.Load)
+        //            {
+        //                OccupancyPercentage =Convert.ToInt32(sensor.Value ?? 0);
+        //            }
+        //        }
+        //    }
+
+        //    computer.Close();
+        //}
 
         //public static void MonitorGit()
         //{
