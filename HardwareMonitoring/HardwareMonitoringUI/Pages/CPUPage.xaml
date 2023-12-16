@@ -5,13 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:xct="http://schemas.microsoft.com/xamarin/2021/toolkit"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              x:Class="HardwareMonitoringUI.Pages.CPUPage"
              Title="CPUPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-
+    <ScrollView>
     <StackLayout Margin="20">
 
-        <Label Text="CPU Information"
+        <Label Text="CPU"
                FontSize="24"
                HorizontalOptions="CenterAndExpand"
                Margin="0,0,0,20"/>
@@ -47,33 +49,54 @@
             </Frame>
 
             <Frame Grid.Row="3" Grid.Column="0" CornerRadius="3" HasShadow="False">
-                <Label Text="Логические процессоры:" VerticalOptions="Center" />
+                <Label Text="Потоки:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="3" Grid.Column="1" CornerRadius="3" HasShadow="False">
                 <Label Text="{Binding NumberOfThreads, StringFormat='{0}'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
             <Frame Grid.Row="4" Grid.Column="0" CornerRadius="3" HasShadow="False">
-                <Label Text="Частота:" VerticalOptions="Center" />
+                <Label Text="Тактовая частота:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="4" Grid.Column="1" CornerRadius="3" HasShadow="False">
                 <Label Text="{Binding Frequency, StringFormat='{0} MHz'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
             <Frame Grid.Row="5" Grid.Column="0" CornerRadius="3" HasShadow="False">
-                <Label Text="Использование:" VerticalOptions="Center" />
+                <Label Text="Загрузка процессора:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="5" Grid.Column="1" CornerRadius="3" HasShadow="False">
                 <Label x:Name="OccupancyPercentageLabel" Text="{Binding OccupancyPercentage, StringFormat='{0}%'}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
-            <Frame Grid.Row="6" Grid.Column="0" CornerRadius="3" HasShadow="False">
+            <!--<Frame Grid.Row="6" Grid.Column="0" CornerRadius="3" HasShadow="False">
                 <Label Text="Температура:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="6" Grid.Column="1" CornerRadius="3" HasShadow="False">
                 <Label x:Name="TemperatureLabel" Text="{Binding Temperature}" VerticalOptions="Center" FontSize="16" TextColor="{DynamicResource SecondaryColor}"/>
-            </Frame>
+            </Frame>-->
         </Grid>
-    </StackLayout>
 
+        <mct:Expander x:Name="MyExpander">
+            <mct:Expander.Header>
+                <Frame BackgroundColor="#E0E0E0" CornerRadius="5" Padding="10" Margin="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Посмотреть график загрузки" FontSize="16" FontAttributes="Bold" Grid.Column="0"/>
+                        <Label Text="▼" FontSize="16" Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+            </mct:Expander.Header>
+            <mct:Expander.Content>
+                    <Frame  CornerRadius="3" HasShadow="False">
+                        <micro:ChartView x:Name="cpuChart" HeightRequest="400" WidthRequest="600"/>
+                    </Frame>
+                    
+            </mct:Expander.Content>
+        </mct:Expander>
+    </StackLayout>
+    </ScrollView>
 </ContentPage>

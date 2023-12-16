@@ -29,7 +29,7 @@
             <ShellContent ContentTemplate="{DataTemplate pages:GPUPage}" />
         </Tab>
         <Tab Title="Battery" >
-            <ShellContent ContentTemplate="{DataTemplate pages:Battery}" />
+            <ShellContent ContentTemplate="{DataTemplate pages:BatteryPage}" />
         </Tab>
     </FlyoutItem>
 

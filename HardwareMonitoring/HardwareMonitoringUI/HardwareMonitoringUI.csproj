@@ -52,17 +52,19 @@
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="CommunityToolkit.Maui.Core" Version="6.1.0" />
 		<PackageReference Include="LibreHardwareMonitorLib" Version="0.9.2" />
+		<PackageReference Include="Microcharts.Maui" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Syncfusion.Maui.Expander" Version="23.2.6" />
 		<PackageReference Include="Syncfusion.Maui.ProgressBar" Version="23.2.6" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\BatteryLibrary\BatteryLibrary.csproj" />
 	  <ProjectReference Include="..\HardwareMonitoringLibrary\HardwareMonitoringLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\Battery.xaml">
+	  <MauiXaml Update="Pages\BatteryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\CPUPage.xaml">

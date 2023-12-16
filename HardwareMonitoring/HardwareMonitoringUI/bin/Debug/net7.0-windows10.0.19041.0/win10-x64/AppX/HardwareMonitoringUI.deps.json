@@ -9,10 +9,12 @@
     ".NETCoreApp,Version=v7.0/win10-x64": {
       "HardwareMonitoringUI/1.0": {
         "dependencies": {
+          "BatteryLibrary": "1.0.0",
           "CommunityToolkit.Maui": "6.1.0",
           "CommunityToolkit.Maui.Core": "6.1.0",
           "HardwareMonitoringLibrary": "1.0.0",
           "LibreHardwareMonitorLib": "0.9.2",
+          "Microcharts.Maui": "1.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
@@ -836,6 +838,17 @@
           }
         }
       },
+      "Microcharts.Maui/1.0.0": {
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Controls": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Microcharts.Maui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -1163,6 +1176,61 @@
         }
       },
       "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {},
+      "SkiaSharp/2.88.3": {
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.3",
+          "SkiaSharp.NativeAssets.macOS": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.3.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.3": {},
+      "SkiaSharp.NativeAssets.Win32/2.88.3": {
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Controls/2.88.3": {
+        "dependencies": {
+          "SkiaSharp.Views.Maui.Core": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.18362.0/SkiaSharp.Views.Maui.Controls.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.3.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Maui.Core/2.88.3": {
+        "dependencies": {
+          "SkiaSharp": "2.88.3",
+          "SkiaSharp.Views.WinUI": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.18362.0/SkiaSharp.Views.Maui.Core.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.3.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.WinUI/2.88.3": {
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.2.221109.1",
+          "SkiaSharp": "2.88.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041.0/SkiaSharp.Views.Windows.dll": {
+            "assemblyVersion": "2.88.0.0",
+            "fileVersion": "2.88.3.0"
+          }
+        }
+      },
       "Syncfusion.Licensing/23.2.6": {
         "runtime": {
           "lib/net7.0/Syncfusion.Licensing.dll": {
@@ -1676,10 +1744,16 @@
           }
         }
       },
+      "BatteryLibrary/1.0.0": {
+        "runtime": {
+          "BatteryLibrary.dll": {}
+        }
+      },
       "HardwareMonitoringLibrary/1.0.0": {
         "dependencies": {
           "LibreHardwareMonitorLib": "0.9.2",
           "Microsoft.Windows.Compatibility": "8.0.0",
+          "System.Diagnostics.PerformanceCounter": "8.0.0",
           "System.Management": "8.0.0"
         },
         "runtime": {
@@ -1746,6 +1820,13 @@
       "sha512": "sha512-mNalmymaiY9CX79hJBoZkQ83V51BPpAZH+OCrP5sewLn9fKfhwKe68jMmjS+CBOIl62Uq0KqiZSlNYbGag9lFA==",
       "path": "librehardwaremonitorlib/0.9.2",
       "hashPath": "librehardwaremonitorlib.0.9.2.nupkg.sha512"
+    },
+    "Microcharts.Maui/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q7FWgkWSA44vgg5N9Nd4KdwoMflcAPYZ7VHqnjetcWu2z4EUx/75OgVqDJeP9WDmHC+hU4BPOyhnPhkS4+1RBg==",
+      "path": "microcharts.maui/1.0.0",
+      "hashPath": "microcharts.maui.1.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
       "type": "package",
@@ -1970,6 +2051,48 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SkiaSharp/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GG8X3EdfwyBfwjl639UIiOVOKEdeoqDgYrz0P1MUCnefXt9cofN+AK8YB/v1+5cLMr03ieWCQdDmPqnFIzSxZw==",
+      "path": "skiasharp/2.88.3",
+      "hashPath": "skiasharp.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CEbWAXMGFkPV3S1snBKK7jEG3+xud/9kmSAhu0BEUKKtlMdxx+Qal0U9bntQREM9QpqP5xLWZooodi8IlV8MEg==",
+      "path": "skiasharp.nativeassets.macos/2.88.3",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MU4ASL8VAbTv5vSw1PoiWjjjpjtGhWtFYuJnrN4sNHFCePb2ohQij9JhSdqLLxk7RpRtWPdV93fbA53Pt+J0yw==",
+      "path": "skiasharp.nativeassets.win32/2.88.3",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Maui.Controls/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fvnvZdfWFYrptu37ul9/rT3QOdhrSUrMrBsHWcDpanVM04KOpHBWJDv/LEsD0jp1rE7TPIXXQk1RXutfXSYveg==",
+      "path": "skiasharp.views.maui.controls/2.88.3",
+      "hashPath": "skiasharp.views.maui.controls.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Maui.Core/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kP7m/DxrGeitgaN9hU7UmOeV4mRMfKdRf+z/SrAJhk2PXJSQJr3jnpBIBr3STTCkWBOuPzw0svQhwonrI2rj5g==",
+      "path": "skiasharp.views.maui.core/2.88.3",
+      "hashPath": "skiasharp.views.maui.core.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.Views.WinUI/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFMAUZfh8ALYwrdEHNBoFPb1gd9+cOG0nWMvixXPjvGZezEBQIb17W2d9Wr4/zd4w049qA2iH5bQFbeK8S7iQw==",
+      "path": "skiasharp.views.winui/2.88.3",
+      "hashPath": "skiasharp.views.winui.2.88.3.nupkg.sha512"
     },
     "Syncfusion.Licensing/23.2.6": {
       "type": "package",
@@ -2285,6 +2408,11 @@
       "sha512": "sha512-Obg3a90MkOw9mYKxrardLpY2u0axDMrSmy4JCdq2cYbelM2cUwmUir5Bomvd1yxmPL9h5LVHU1tuKBZpUjfASg==",
       "path": "system.windows.extensions/8.0.0",
       "hashPath": "system.windows.extensions.8.0.0.nupkg.sha512"
+    },
+    "BatteryLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "HardwareMonitoringLibrary/1.0.0": {
       "type": "project",

@@ -9,7 +9,12 @@
       "TestingHardwareMonitoring/1.0.0": {
         "dependencies": {
           "BatteryLibrary": "1.0.0",
-          "HardwareMonitoringLibrary": "1.0.0"
+          "GPULibrary": "1.0.0",
+          "HardwareMonitoringLibrary": "1.0.0",
+          "NvAPIWrapper.Net": "0.8.1.101",
+          "OpenHardwareMonitor": "0.9.6",
+          "System.Diagnostics.PerformanceCounter": "8.0.0",
+          "System.Management": "8.0.0"
         },
         "runtime": {
           "TestingHardwareMonitoring.dll": {}
@@ -232,6 +237,22 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "NvAPIWrapper.Net/0.8.1.101": {
+        "runtime": {
+          "lib/netstandard2.0/NvAPIWrapper.dll": {
+            "assemblyVersion": "0.8.1.100",
+            "fileVersion": "0.8.1.100"
+          }
+        }
+      },
+      "OpenHardwareMonitor/0.9.6": {
+        "runtime": {
+          "lib/net45/OpenHardwareMonitorLib.dll": {
+            "assemblyVersion": "0.9.6.0",
+            "fileVersion": "0.9.6.0"
           }
         }
       },
@@ -1004,10 +1025,16 @@
           "BatteryLibrary.dll": {}
         }
       },
+      "GPULibrary/1.0.0": {
+        "runtime": {
+          "GPULibrary.dll": {}
+        }
+      },
       "HardwareMonitoringLibrary/1.0.0": {
         "dependencies": {
           "LibreHardwareMonitorLib": "0.9.2",
           "Microsoft.Windows.Compatibility": "8.0.0",
+          "System.Diagnostics.PerformanceCounter": "8.0.0",
           "System.Management": "8.0.0"
         },
         "runtime": {
@@ -1091,6 +1118,20 @@
       "sha512": "sha512-vSN/L1uaVwKsiLa95bYu2SGkF0iY3xMblTfxc8alSziPuVfJpj3geVqHGAA75J7cZkMuKpFVikz82Lo6y6LLdA==",
       "path": "mono.posix.netstandard/1.0.0",
       "hashPath": "mono.posix.netstandard.1.0.0.nupkg.sha512"
+    },
+    "NvAPIWrapper.Net/0.8.1.101": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qX+5EQ32tCTqBkX/9BNfx7w4HPi18s3XhMubjbxSjPhYQ6pXWL+HGnaZEmGvFlOxvsQN+/6eV3x5bRo1CDY/mQ==",
+      "path": "nvapiwrapper.net/0.8.1.101",
+      "hashPath": "nvapiwrapper.net.0.8.1.101.nupkg.sha512"
+    },
+    "OpenHardwareMonitor/0.9.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbx870Mi1nzz99VYx4yF0uaH2a8jtQ94Y+vT+0pRZz3alvCzaiJlbre7ArV8oP2YDNO1oVuvYxKZSoWSFUFj3Q==",
+      "path": "openhardwaremonitor/0.9.6",
+      "hashPath": "openhardwaremonitor.0.9.6.nupkg.sha512"
     },
     "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
       "type": "package",
@@ -1450,6 +1491,11 @@
       "hashPath": "system.windows.extensions.8.0.0.nupkg.sha512"
     },
     "BatteryLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GPULibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

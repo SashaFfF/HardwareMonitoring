@@ -2,16 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HardwareMonitoringUI.Pages.GPUPage"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="GPUPage">
+
+    <ScrollView>
     <StackLayout Margin="20">
 
-        <Label Text="GPU Information"
+        <Label Text="GPU"
                FontSize="24"
                HorizontalOptions="CenterAndExpand"
                Margin="0,0,0,20"/>
 
         <Grid ColumnSpacing="4" RowSpacing="2">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -27,13 +33,47 @@
             </Frame>
 
             <Frame Grid.Row="2" Grid.Column="0" CornerRadius="3" HasShadow="False">
-                <Label Text="CurrentRefreshRate:" VerticalOptions="Center" />
+                <Label Text="Использование:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="2" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="{Binding CurrentRefreshRate,  StringFormat='{0} Hz'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                <Label x:Name="LoadLabel" Text="{Binding Load,  StringFormat='{0} %'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
 
-            
+            <Frame Grid.Row="3" Grid.Column="0" CornerRadius="3" HasShadow="False">
+                <Label Text="Доступно памяти:" VerticalOptions="Center" />
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="1" CornerRadius="3" HasShadow="False">
+                <Label Text="8 ГБ" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+            </Frame>
+                
+            <Frame Grid.Row="4" Grid.Column="0" CornerRadius="3" HasShadow="False">
+                <Label Text="Использовано памяти:" VerticalOptions="Center" />
+            </Frame>
+            <Frame Grid.Row="4" Grid.Column="1" CornerRadius="3" HasShadow="False">
+                <Label Text="0,7 ГБ" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+            </Frame>
         </Grid>
+
+        <mct:Expander x:Name="MyExpander">
+            <mct:Expander.Header>
+                <Frame BackgroundColor="#E0E0E0" CornerRadius="5" Padding="10" Margin="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Посмотреть график загрузки" FontSize="16" FontAttributes="Bold" Grid.Column="0"/>
+                        <Label Text="▼" FontSize="16" Grid.Column="1" VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+            </mct:Expander.Header>
+            <mct:Expander.Content>
+                <Frame CornerRadius="3" HasShadow="False">
+                    <micro:ChartView x:Name="gpuChart" HeightRequest="400" WidthRequest="600"/>
+                </Frame>
+
+            </mct:Expander.Content>
+        </mct:Expander>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

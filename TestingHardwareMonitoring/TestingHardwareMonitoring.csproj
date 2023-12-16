@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101" />
+    <PackageReference Include="OpenHardwareMonitor" Version="0.9.6" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HardwareMonitoring\BatteryLibrary\BatteryLibrary.csproj" />
+    <ProjectReference Include="..\HardwareMonitoring\GPULibrary\GPULibrary.csproj" />
     <ProjectReference Include="..\HardwareMonitoring\HardwareMonitoringLibrary\HardwareMonitoringLibrary.csproj" />
   </ItemGroup>
 

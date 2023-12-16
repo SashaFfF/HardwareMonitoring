@@ -1,0 +1,8 @@
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\bin\Debug\GPULibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\bin\Debug\GPULibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\bin\Debug\OpenHardwareMonitorLib.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\obj\Debug\GPULibrary.csproj.AssemblyReference.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\obj\Debug\GPULibrary.csproj.CoreCompileInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\obj\Debug\GPULibrary.csproj.CopyComplete
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\obj\Debug\GPULibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\GPULibrary\obj\Debug\GPULibrary.pdb

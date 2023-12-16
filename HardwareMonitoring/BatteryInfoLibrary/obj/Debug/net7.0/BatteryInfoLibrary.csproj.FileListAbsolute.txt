@@ -1,0 +1,12 @@
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\bin\Debug\net7.0\BatteryInfoLibrary.deps.json
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\bin\Debug\net7.0\BatteryInfoLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\bin\Debug\net7.0\BatteryInfoLibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.csproj.AssemblyReference.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.AssemblyInfoInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.AssemblyInfo.cs
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.csproj.CoreCompileInputs.cache
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\refint\BatteryInfoLibrary.dll
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\BatteryInfoLibrary.pdb
+D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryInfoLibrary\obj\Debug\net7.0\ref\BatteryInfoLibrary.dll

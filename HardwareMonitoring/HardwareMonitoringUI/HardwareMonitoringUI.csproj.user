@@ -15,7 +15,7 @@
     <MauiXaml Update="MainPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Pages\Battery.xaml">
+    <MauiXaml Update="Pages\BatteryPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\CPUPage.xaml">

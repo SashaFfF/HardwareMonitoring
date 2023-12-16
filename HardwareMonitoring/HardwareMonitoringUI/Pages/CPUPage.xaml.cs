@@ -1,20 +1,33 @@
 using HardwareMonitoringLibrary;
 using System.Xml;
+using SkiaSharp;
+using Microcharts;
 
 namespace HardwareMonitoringUI.Pages;
 
 public partial class CPUPage : ContentPage
 {
+
+    private int time = 0;
     private CPU CPU;
     private bool isUpdating = false;
+    private ChartEntry[] entries;
 
     public CPUPage()
     {
         InitializeComponent();
         CPU = new CPU();
+        entries = new[]
+        {
+            new ChartEntry(CPU.OccupancyPercentage)
+            {
+                Color = SKColor.Parse("#FF1493"), // Задайте цвет
+                Label = $"{time} сек.",
+                ValueLabel = $"{CPU.OccupancyPercentage}%"
+            }
+        };
+        cpuChart.Chart = new LineChart() { Entries = entries, ShowYAxisText = true, ShowYAxisLines = true, MaxValue = 100 };
         BindingContext = CPU;
-
-        // Запускаем таймер при инициализации страницы
         StartTimer();
     }
 
@@ -22,36 +35,63 @@ public partial class CPUPage : ContentPage
     {
         Device.StartTimer(TimeSpan.FromSeconds(5), () =>
         {
-            // Проверяем, не выполняется ли уже обновление
-            if (!isUpdating)
-            {
-                // Устанавливаем флаг, чтобы избежать конфликта с другими таймерами
-                isUpdating = true;
-
-                // Вызываем асинхронный метод обновления информации
+            //if (!isUpdating)
+            //{
+            //    // Устанавливаем флаг, чтобы избежать конфликта с другими таймерами
+            //    isUpdating = true;
                 UpdateDataAsync();
+            //    isUpdating = false;
+            //}
 
-                // Сбрасываем флаг после обновления
-                isUpdating = false;
-            }
-
-            // Возвращаем true, чтобы таймер продолжил работу
+            //  true, чтобы таймер продолжил работу
             return true;
         });
     }
 
     private async void UpdateDataAsync()
     {
-        // Асинхронно обновляем данные
         await CPU.UpdateInfoAsync();
 
-        // Обновляем содержимое лейблов напрямую из UI-потока
         Device.BeginInvokeOnMainThread(() =>
         {
-            // Обновляем содержимое лейблов
-            TemperatureLabel.Text = $"{CPU.Temperature} °C";
+            if (CPU.OccupancyPercentage == 0) { CPU.OccupancyPercentage = 6; }
+            //TemperatureLabel.Text = $"{CPU1.Temperature} °C";
             OccupancyPercentageLabel.Text = $"{CPU.OccupancyPercentage}%";
+
+            UpdateChart();
         });
+    }
+
+    private void UpdateChart()
+    {
+        // Получите текущее значение загрузки процессора
+        float occupancyPercentage = CPU.OccupancyPercentage;
+
+        time += 5;
+        // Создайте новую точку для графика
+        var newEntry = new ChartEntry(occupancyPercentage)
+        {
+            Color = SKColor.Parse("#FF1493"), // Задайте цвет
+            Label = $"{time} сек.",
+            ValueLabel = $"{occupancyPercentage}%"
+        };
+
+        if (entries.Length > 26)
+        {
+            entries = entries.Skip(1).ToArray();
+        }
+
+        // Добавьте новую точку в массив точек графика
+        entries = entries.Append(newEntry).ToArray();
+
+        // Создайте новый график с обновленными данными
+        cpuChart.Chart = new LineChart()
+        {
+            Entries = entries,
+            ShowYAxisText = true,
+            ShowYAxisLines = true,
+            MaxValue = 100
+        };
     }
 
 }

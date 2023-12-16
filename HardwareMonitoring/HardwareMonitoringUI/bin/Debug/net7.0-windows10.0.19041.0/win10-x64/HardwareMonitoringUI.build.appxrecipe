@@ -610,6 +610,9 @@
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\librehardwaremonitorlib\0.9.2\lib\net7.0\LibreHardwareMonitorLib.dll">
       <PackagePath>LibreHardwareMonitorLib.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microcharts.maui\1.0.0\lib\net6.0-windows10.0.19041\Microcharts.Maui.dll">
+      <PackagePath>Microcharts.Maui.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microsoft.bcl.asyncinterfaces\5.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
     </AppxPackagedFile>
@@ -702,6 +705,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\mono.posix.netstandard\1.0.0\runtimes\win-x64\lib\netstandard2.0\Mono.Posix.NETStandard.dll">
       <PackagePath>Mono.Posix.NETStandard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\skiasharp\2.88.3\lib\net6.0\SkiaSharp.dll">
+      <PackagePath>SkiaSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\skiasharp.views.maui.controls\2.88.3\lib\net6.0-windows10.0.18362.0\SkiaSharp.Views.Maui.Controls.dll">
+      <PackagePath>SkiaSharp.Views.Maui.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\skiasharp.views.maui.core\2.88.3\lib\net6.0-windows10.0.18362.0\SkiaSharp.Views.Maui.Core.dll">
+      <PackagePath>SkiaSharp.Views.Maui.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\skiasharp.views.winui\2.88.3\lib\net6.0-windows10.0.19041.0\SkiaSharp.Views.Windows.dll">
+      <PackagePath>SkiaSharp.Views.Windows.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\syncfusion.licensing\23.2.6\lib\net7.0\Syncfusion.Licensing.dll">
       <PackagePath>Syncfusion.Licensing.dll</PackagePath>
@@ -922,6 +937,12 @@
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\runtime.win-x64.runtime.native.system.data.sqlclient.sni\4.4.0\runtimes\win-x64\native\sni.dll">
       <PackagePath>sni.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\skiasharp.nativeassets.win32\2.88.3\runtimes\win-x64\native\libSkiaSharp.dll">
+      <PackagePath>libSkiaSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\BatteryLibrary\bin\Debug\BatteryLibrary.dll">
+      <PackagePath>BatteryLibrary.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\bin\Debug\net7.0\HardwareMonitoringLibrary.dll">
       <PackagePath>HardwareMonitoringLibrary.dll</PackagePath>
     </AppxPackagedFile>
@@ -1099,6 +1120,9 @@
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ch.scale-100.jpg">
+      <PackagePath>ch.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -1113,6 +1137,24 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p100.scale-100.jpg">
+      <PackagePath>p100.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p20.scale-100.jpg">
+      <PackagePath>p20.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p35.scale-100.jpg">
+      <PackagePath>p35.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p50.scale-100.jpg">
+      <PackagePath>p50.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p70.scale-100.jpg">
+      <PackagePath>p70.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\p85.scale-100.jpg">
+      <PackagePath>p85.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ssd.scale-100.png">
       <PackagePath>ssd.scale-100.png</PackagePath>

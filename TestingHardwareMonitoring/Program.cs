@@ -1,7 +1,9 @@
-﻿using HardwareMonitoringLibrary;
+﻿using GPULibrary;
+using HardwareMonitoringLibrary;
 using HardwareMonitoringLibrary.Drive;
-using BatteryLibrary;
-using Battery = BatteryLibrary.Battery;
+
+using TestingHardwareMonitoring;
+using Class1 = GPULibrary.Class1;
 
 
 //Console.WriteLine(Processor.GetProcessorName());
@@ -10,6 +12,7 @@ using Battery = BatteryLibrary.Battery;
 
 CPU cpu = new CPU();
 Console.WriteLine($"CPU temp: {cpu.Temperature}");
+//CPU.MonitorGit();
 //for(int i = 0;i < 10; i++)
 //{
 
@@ -58,6 +61,17 @@ Console.WriteLine($"CPU temp: {cpu.Temperature}");
 //Console.WriteLine($"Time To Full Charge: {battery.TimeToFullCharge}");
 
 
-GPU.GetInfo();
+//GPU.GetInfo();
 
 //Processor.MonitorGit();
+//BatteryInf b = new BatteryInf();
+//b.get();
+//b.time();
+//b.get2();
+//G.get();
+
+//Cache.CPUSpeed();
+//GPU.GetInfo();
+
+Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
+Gpu.GetiInfo();

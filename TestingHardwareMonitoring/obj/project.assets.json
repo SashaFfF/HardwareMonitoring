@@ -258,6 +258,28 @@
           }
         }
       },
+      "NvAPIWrapper.Net/0.8.1.101": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NvAPIWrapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NvAPIWrapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OpenHardwareMonitor/0.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net45/OpenHardwareMonitorLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OpenHardwareMonitorLib.dll": {}
+        }
+      },
       "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1296,12 +1318,22 @@
           "bin/placeholder/BatteryLibrary.dll": {}
         }
       },
+      "GPULibrary/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GPULibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GPULibrary.dll": {}
+        }
+      },
       "HardwareMonitoringLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "LibreHardwareMonitorLib": "0.9.2",
           "Microsoft.Windows.Compatibility": "8.0.0",
+          "System.Diagnostics.PerformanceCounter": "8.0.0",
           "System.Management": "8.0.0"
         },
         "compile": {
@@ -1568,6 +1600,36 @@
         "runtimes/win-x86/lib/netstandard2.0/Mono.Posix.NETStandard.dll",
         "runtimes/win-x86/native/MonoPosixHelper.dll",
         "runtimes/win-x86/native/libMonoPosixHelper.dll"
+      ]
+    },
+    "NvAPIWrapper.Net/0.8.1.101": {
+      "sha512": "qX+5EQ32tCTqBkX/9BNfx7w4HPi18s3XhMubjbxSjPhYQ6pXWL+HGnaZEmGvFlOxvsQN+/6eV3x5bRo1CDY/mQ==",
+      "type": "package",
+      "path": "nvapiwrapper.net/0.8.1.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net45/NvAPIWrapper.dll",
+        "lib/net45/NvAPIWrapper.xml",
+        "lib/netstandard2.0/NvAPIWrapper.dll",
+        "lib/netstandard2.0/NvAPIWrapper.xml",
+        "nvapiwrapper.net.0.8.1.101.nupkg.sha512",
+        "nvapiwrapper.net.nuspec",
+        "readme.txt"
+      ]
+    },
+    "OpenHardwareMonitor/0.9.6": {
+      "sha512": "vbx870Mi1nzz99VYx4yF0uaH2a8jtQ94Y+vT+0pRZz3alvCzaiJlbre7ArV8oP2YDNO1oVuvYxKZSoWSFUFj3Q==",
+      "type": "package",
+      "path": "openhardwaremonitor/0.9.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OpenHardwareMonitor.png",
+        "lib/net45/OpenHardwareMonitorLib.dll",
+        "openhardwaremonitor.0.9.6.nupkg.sha512",
+        "openhardwaremonitor.nuspec"
       ]
     },
     "runtime.linux-arm.runtime.native.System.IO.Ports/8.0.0": {
@@ -3349,6 +3411,11 @@
       "path": "../HardwareMonitoring/BatteryLibrary/BatteryLibrary.csproj",
       "msbuildProject": "../HardwareMonitoring/BatteryLibrary/BatteryLibrary.csproj"
     },
+    "GPULibrary/1.0.0": {
+      "type": "project",
+      "path": "../HardwareMonitoring/GPULibrary/GPULibrary.csproj",
+      "msbuildProject": "../HardwareMonitoring/GPULibrary/GPULibrary.csproj"
+    },
     "HardwareMonitoringLibrary/1.0.0": {
       "type": "project",
       "path": "../HardwareMonitoring/HardwareMonitoringLibrary/HardwareMonitoringLibrary.csproj",
@@ -3358,7 +3425,12 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "BatteryLibrary >= 1.0.0",
-      "HardwareMonitoringLibrary >= 1.0.0"
+      "GPULibrary >= 1.0.0",
+      "HardwareMonitoringLibrary >= 1.0.0",
+      "NvAPIWrapper.Net >= 0.8.1.101",
+      "OpenHardwareMonitor >= 0.9.6",
+      "System.Diagnostics.PerformanceCounter >= 8.0.0",
+      "System.Management >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -3397,6 +3469,9 @@
             "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\BatteryLibrary\\BatteryLibrary.csproj": {
               "projectPath": "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\BatteryLibrary\\BatteryLibrary.csproj"
             },
+            "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\GPULibrary\\GPULibrary.csproj": {
+              "projectPath": "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\GPULibrary\\GPULibrary.csproj"
+            },
             "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\HardwareMonitoringLibrary\\HardwareMonitoringLibrary.csproj": {
               "projectPath": "D:\\5 sem\\HardwareMonitoring\\HardwareMonitoring\\HardwareMonitoringLibrary\\HardwareMonitoringLibrary.csproj"
             }
@@ -3412,6 +3487,24 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "NvAPIWrapper.Net": {
+            "target": "Package",
+            "version": "[0.8.1.101, )"
+          },
+          "OpenHardwareMonitor": {
+            "target": "Package",
+            "version": "[0.9.6, )"
+          },
+          "System.Diagnostics.PerformanceCounter": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "System.Management": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -3431,5 +3524,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"OpenHardwareMonitor 0.9.6\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "OpenHardwareMonitor",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

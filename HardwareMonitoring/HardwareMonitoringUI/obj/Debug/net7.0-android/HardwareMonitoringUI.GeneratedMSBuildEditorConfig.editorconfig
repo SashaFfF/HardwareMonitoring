@@ -32,11 +32,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = HardwareMonitoringUI.MainP
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/5 sem/HardwareMonitoring/HardwareMonitoring/HardwareMonitoringUI/Pages/Battery.xaml]
+[D:/5 sem/HardwareMonitoring/HardwareMonitoring/HardwareMonitoringUI/Pages/BatteryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HardwareMonitoringUI.Pages.Battery.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\Battery.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\Battery.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HardwareMonitoringUI.Pages.BatteryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\BatteryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\BatteryPage.xaml
 
 [D:/5 sem/HardwareMonitoring/HardwareMonitoring/HardwareMonitoringUI/Pages/CPUPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

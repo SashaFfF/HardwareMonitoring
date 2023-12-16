@@ -3325,6 +3325,7 @@
     "net7.0": [
       "LibreHardwareMonitorLib >= 0.9.2",
       "Microsoft.Windows.Compatibility >= 8.0.0",
+      "System.Diagnostics.PerformanceCounter >= 8.0.0",
       "System.Management >= 8.0.0"
     ]
   },
@@ -3378,6 +3379,10 @@
             "version": "[0.9.2, )"
           },
           "Microsoft.Windows.Compatibility": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "System.Diagnostics.PerformanceCounter": {
             "target": "Package",
             "version": "[8.0.0, )"
           },

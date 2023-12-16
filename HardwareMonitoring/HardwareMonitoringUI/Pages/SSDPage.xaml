@@ -4,6 +4,7 @@
              x:Class="HardwareMonitoringUI.Pages.SSDPage"
              xmlns:converters="clr-namespace:HardwareMonitoringUI.Converter"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              Title="SSDPage">
 
     <ContentPage.Resources>
@@ -45,37 +46,90 @@
                 
         </Grid>
 
-        <CollectionView ItemsSource="{Binding Drive.Disks}" SelectionMode="Single" x:Name="disksCollectionView">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <mct:Expander x:Name="MyExpander">
-                        <mct:Expander.Header>
-                            <Frame BackgroundColor="#E0E0E0" CornerRadius="5" Padding="10" Margin="5">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" Grid.Column="0"/>
-                                    <Label Text="▼" FontSize="16" Grid.Column="1" VerticalOptions="Center"/>
-                                </Grid>
-                            </Frame>
-                        </mct:Expander.Header>
-                        <mct:Expander.Content>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding FileSystem}" FontSize="16" />
-                                <Label Text="{Binding TotalSizeGb, StringFormat='Ёмкость: {0} ГБ'}" FontSize="16" />
-                                <Label Text="{Binding FreeSpaceGb, StringFormat='Доступно: {0} ГБ'}" FontSize="16" />
-                                <Label Text="{Binding FreePercentage, StringFormat='Доступно: {0} %'}" FontSize="16" />
-                                <Label Text="{Binding UsedSpaceGb, StringFormat='Использовано: {0} ГБ'}" FontSize="16" />
-                                <Label Text="{Binding OccupancyPercentage, StringFormat='Использовано: {0} %'}" FontSize="16" />
-                                <ProgressBar Progress="{Binding OccupancyPercentage, Converter={StaticResource PercentageConverter}}" HeightRequest="30" VerticalOptions="CenterAndExpand" />
+            <CollectionView ItemsSource="{Binding Drive.Disks}" SelectionMode="Single" x:Name="disksCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <mct:Expander x:Name="MyExpander">
+                            <mct:Expander.Header>
+                                <Frame BackgroundColor="#E0E0E0" CornerRadius="5" Padding="10" Margin="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold" Grid.Column="0"/>
+                                        <Label Text="▼" FontSize="16" Grid.Column="1" VerticalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+                            </mct:Expander.Header>
+                            <mct:Expander.Content>
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding FileSystem}" FontSize="16" />
+                                    <Label Text="{Binding TotalSizeGb, StringFormat='Ёмкость: {0} ГБ'}" FontSize="16" />
+                                    <Label Text="{Binding FreeSpaceGb, StringFormat='Доступно: {0} ГБ'}" FontSize="16" />
+                                    <Label Text="{Binding FreePercentage, StringFormat='Доступно: {0} %'}" FontSize="16" />
+                                    <Label Text="{Binding UsedSpaceGb, StringFormat='Использовано: {0} ГБ'}" FontSize="16" />
+                                    <Label Text="{Binding OccupancyPercentage, StringFormat='Использовано: {0} %'}" FontSize="16" />
+                                    <ProgressBar Progress="{Binding OccupancyPercentage, Converter={StaticResource PercentageConverter}}" HeightRequest="30" VerticalOptions="CenterAndExpand" />
                                 </StackLayout>
-                        </mct:Expander.Content>
-                    </mct:Expander>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+                            </mct:Expander.Content>
+                        </mct:Expander>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <mct:Expander x:Name="MyExpander">
+                    <mct:Expander.Header>
+                        <Frame BackgroundColor="#E0E0E0" CornerRadius="5" Padding="10" Margin="5">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Посмотреть круговые диаграммы" FontSize="16" FontAttributes="Bold" Grid.Column="0"/>
+                                <Label Text="▼" FontSize="16" Grid.Column="1" VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                    </mct:Expander.Header>
+                    <mct:Expander.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <VerticalStackLayout Grid.Row="1" Grid.Column="0" Padding="10" Margin="5">
+                            <Label Text="Диск C:" HorizontalOptions="Center"/>
+                            <Border Stroke="#E0E0E0"
+                                        StrokeThickness="1"
+                                        Padding="16,8"
+                                        HorizontalOptions="Center"
+                                     HeightRequest="400"
+                                        WidthRequest="400">
+                                <micro:ChartView x:Name="CChart" HeightRequest="300" WidthRequest="300"/>
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Row="1" Grid.Column="1"  Padding="10" Margin="5">
+                            <Label Text="Диск D:" HorizontalOptions="Center"/>
+                            <Border Stroke="#E0E0E0"
+                                        StrokeThickness="1"
+                                        Padding="16,8"
+                                        HorizontalOptions="Center"
+                                        HeightRequest="400"
+                                        WidthRequest="400">
+                                <micro:ChartView x:Name="DChart" HeightRequest="370" WidthRequest="370"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </Grid>
+                </mct:Expander.Content>
+                </mct:Expander>
+        </StackLayout>
+        
     </ScrollView>
 </ContentPage>

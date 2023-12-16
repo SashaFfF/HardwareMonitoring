@@ -165,3 +165,9 @@ CommunityToolkit.Maui.Core.dll
 CommunityToolkit.Maui.dll
 CommunityToolkit.Maui.Core.aar
 CommunityToolkit.Maui.aar
+Microcharts.Droid.dll
+SkiaSharp.dll
+SkiaSharp.Views.Android.dll
+Microcharts.Maui.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
