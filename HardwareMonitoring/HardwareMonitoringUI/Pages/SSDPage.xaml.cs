@@ -13,12 +13,9 @@ public partial class SSDPage : ContentPage
 	{
 		InitializeComponent();
         Drive = new SSD();
-        
         makeChart();
-
         BindingContext = this;
     }
-
 
     public void makeChart()
     {
@@ -43,7 +40,7 @@ public partial class SSDPage : ContentPage
                     ValueLabel = $"{load}%"
                 }
             };
-            CChart.Chart = new DonutChart() { Entries = entries, MaxValue = 100 };
+            CChart.Chart = new DonutChart() { Entries = entries, MaxValue = 100, IsAnimated = false };
             //, ShowYAxisText = true, ShowYAxisLines = true, MaxValue = 100 
 
             free = (float)Drive.Disks[1].FreePercentage;
@@ -63,7 +60,7 @@ public partial class SSDPage : ContentPage
                     ValueLabel = $"{load}%"
                 }
             };
-            DChart.Chart = new DonutChart() { Entries = entries};
+            DChart.Chart = new DonutChart() { Entries = entries, MaxValue = 100, IsAnimated = false };
         }
 
 

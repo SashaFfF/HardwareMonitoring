@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-17T19:41:22.416</Modified>
+      <Modified>2023-12-17T21:08:30.970</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-17T19:41:21.819</Modified>
+      <Modified>2023-12-17T21:08:30.482</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\HardwareMonitoringUI.runtimeconfig.json">
       <PackagePath>HardwareMonitoringUI.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\HardwareMonitoringUI.dll">
       <PackagePath>HardwareMonitoringUI.dll</PackagePath>
-      <Modified>2023-12-17T19:41:20.753</Modified>
+      <Modified>2023-12-17T21:08:29.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>HardwareMonitoringUI.exe</PackagePath>
-      <Modified>2023-12-17T19:41:20.765</Modified>
+      <Modified>2023-12-17T21:08:29.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.2\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1259,11 +1259,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringLibrary\bin\Debug\net7.0\HardwareMonitoringLibrary.dll">
       <PackagePath>HardwareMonitoringLibrary.dll</PackagePath>
-      <Modified>2023-12-17T19:39:35.604</Modified>
+      <Modified>2023-12-17T20:58:51.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\5 sem\HardwareMonitoring\HardwareMonitoring\HardwareMonitoringUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\HardwareMonitoringUI.deps.json">
       <PackagePath>HardwareMonitoringUI.deps.json</PackagePath>
-      <Modified>2023-12-17T19:41:22.153</Modified>
+      <Modified>2023-12-17T21:08:30.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.52\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

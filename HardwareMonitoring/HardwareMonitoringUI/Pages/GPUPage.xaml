@@ -43,14 +43,14 @@
                 <Label Text="Доступно памяти:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="3" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="8 ГБ" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                    <Label Text="{Binding TotalVideoMemory,  StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
                 
             <Frame Grid.Row="4" Grid.Column="0" CornerRadius="3" HasShadow="False">
                 <Label Text="Использовано памяти:" VerticalOptions="Center" />
             </Frame>
             <Frame Grid.Row="4" Grid.Column="1" CornerRadius="3" HasShadow="False">
-                <Label Text="0,7 ГБ" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
+                    <Label Text="{Binding VideoMemory,  StringFormat='{0} ГБ'}" VerticalOptions="Center" FontSize="18" TextColor="{DynamicResource SecondaryColor}"/>
             </Frame>
         </Grid>
 

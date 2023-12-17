@@ -23,5 +23,13 @@ namespace HardwareMonitoringUI.Converter
         {
             throw new NotImplementedException();
         }
+
+        public int NullConvert()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(3); // генерация случайного числа от 0 до 2
+            int[] possibleNumbers = { 6, 8, 11 }; // массив возможных чисел
+            return possibleNumbers[randomNumber]; 
+        }
     }
 }

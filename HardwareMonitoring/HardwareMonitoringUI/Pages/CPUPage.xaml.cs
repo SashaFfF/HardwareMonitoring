@@ -2,6 +2,7 @@ using HardwareMonitoringLibrary;
 using System.Xml;
 using SkiaSharp;
 using Microcharts;
+using HardwareMonitoringUI.Converter;
 
 namespace HardwareMonitoringUI.Pages;
 
@@ -54,7 +55,8 @@ public partial class CPUPage : ContentPage
 
         Device.BeginInvokeOnMainThread(() =>
         {
-            if (CPU.OccupancyPercentage == 0) { CPU.OccupancyPercentage = 6; }
+            PercentageConverter percentageConverter = new PercentageConverter();
+            if (CPU.OccupancyPercentage == 0) { CPU.OccupancyPercentage = percentageConverter.NullConvert(); }
             //TemperatureLabel.Text = $"{CPU1.Temperature} °C";
             OccupancyPercentageLabel.Text = $"{CPU.OccupancyPercentage}%";
 

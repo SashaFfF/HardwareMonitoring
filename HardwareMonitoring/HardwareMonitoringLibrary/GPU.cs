@@ -16,8 +16,8 @@ namespace HardwareMonitoringLibrary
         public string Name { get; set; }
         public int CurrentRefreshRate { get; set; }
         public double Load { get; set; }
-        //public double TotalVideoMemory { get; set; }
-        //public double VideoMemory { get; set; }
+        public double TotalVideoMemory { get; set; }
+        public double VideoMemory { get; set; }
 
 
 
@@ -38,8 +38,8 @@ namespace HardwareMonitoringLibrary
             {
                 Name = mo["Name"].ToString();
                 CurrentRefreshRate = Convert.ToInt32(mo["CurrentRefreshRate"]);
-               // TotalVideoMemory = Convert.ToUInt64(mo["AdapterRAM"]);
-                //VideoMemory = Convert.ToUInt64(mo["AdapterRAM"]);
+                TotalVideoMemory = Convert.ToDouble(mo["AdapterRAM"]) / (1024.0 * 1024.0 * 1024.0) * 8;
+                VideoMemory = GPUPerfFormattedData.GetVideoMemory();
             }
         }
 

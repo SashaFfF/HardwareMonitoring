@@ -59,5 +59,27 @@ namespace HardwareMonitoringLibrary.Drive
             }
         }
 
+        public void UpdateDiskInfo()
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            Disks.Clear();
+            foreach (DriveInfo drive in allDrives)
+            {
+                Disks.Add(new Disk
+                {
+                    Name = drive.Name,
+                    FileSystem = drive.DriveFormat,
+                    TotalSizeGb = drive.TotalSize / (1024 * 1024 * 1024),
+
+                    FreeSpaceGb = Math.Round(drive.TotalFreeSpace / (1024.0 * 1024.0 * 1024.0), 1), //округляю объем свободной памяти до 1 знака после запятой
+                    FreePercentage = (int)Math.Round(drive.TotalFreeSpace * 100 / Convert.ToDouble(drive.TotalSize)), //процент свободного пространства на диске, округляю процент
+
+                    UsedSpaceGb = Math.Round((drive.TotalSize - drive.TotalFreeSpace) / (1024.0 * 1024.0 * 1024.0), 1), //округляю объем занятой памяти до 1 знака после запятой
+                    OccupancyPercentage = (int)Math.Round((drive.TotalSize - drive.TotalFreeSpace) * 100 / Convert.ToDouble(drive.TotalSize)) //процент загруженности диска, округляю процент
+                });
+            }
+
+        }
+
     }
 }
