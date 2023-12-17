@@ -12,12 +12,16 @@ public partial class BatteryPage : ContentPage
     public string Status { get; set; }
     public string TimeLeft { get; set; }
     public EnergySaverStatus PowerSaveMode { get; set; }
+
+    public TimeForecast timeForecast { get; set; }
    
     public BatteryPage()
 	{
 		InitializeComponent();
-        UpdateBatteryInfo();
 
+        timeForecast = new TimeForecast();
+
+        UpdateBatteryInfo();
         BindingContext = this;
         Device.StartTimer(TimeSpan.FromSeconds(5), () =>
         {
@@ -43,7 +47,7 @@ public partial class BatteryPage : ContentPage
 
         if (Status.Equals("Battery"))
         {
-            TimeLeft = Converters.BatteryTime.RemainingChargeTime(ChargePercentage);
+            TimeLeft = timeForecast.UpdateTime(ChargePercentage);
             BatteryTime.Text = "Прогноз времени работы: " + TimeLeft.ToString();
         }
         else

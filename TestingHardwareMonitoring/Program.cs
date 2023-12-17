@@ -73,5 +73,13 @@ Console.WriteLine($"CPU temp: {cpu.Temperature}");
 //Cache.CPUSpeed();
 //GPU.GetInfo();
 
-Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
-Gpu.GetiInfo();
+//Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
+//Gpu.GetiInfo();
+
+Prognosis p= new Prognosis();
+int count = p.GetCountOfProcesses();
+Console.WriteLine(count);
+Console.WriteLine(p.GetVoltage()); 
+
+double sec = p.GetOperatingTimeForecast(100);
+Console.WriteLine(p.TimeConverter(sec));
