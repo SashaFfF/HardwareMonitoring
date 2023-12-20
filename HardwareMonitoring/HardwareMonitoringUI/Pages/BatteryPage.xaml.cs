@@ -13,16 +13,18 @@ public partial class BatteryPage : ContentPage
     public string TimeLeft { get; set; }
     public EnergySaverStatus PowerSaveMode { get; set; }
 
-    public TimeForecast timeForecast { get; set; }
+    public TimeForecast2 timeForecast { get; set; }
    
     public BatteryPage()
 	{
 		InitializeComponent();
 
-        timeForecast = new TimeForecast();
+        timeForecast = new TimeForecast2();
 
         UpdateBatteryInfo();
         BindingContext = this;
+
+
         Device.StartTimer(TimeSpan.FromSeconds(5), () =>
         {
             UpdateBatteryInfo();
@@ -30,7 +32,7 @@ public partial class BatteryPage : ContentPage
         });
     }
 
-    private void UpdateBatteryInfo()
+    private async void UpdateBatteryInfo()
     {
         ChargeLevel = Battery.ChargeLevel;
         ChargePercentage = Convert.ToInt32(ChargeLevel * 100);
@@ -47,6 +49,7 @@ public partial class BatteryPage : ContentPage
 
         if (Status.Equals("Battery"))
         {
+            await timeForecast.RAM.UpdateMemoryInfoAsync();
             TimeLeft = timeForecast.UpdateTime(ChargePercentage);
             BatteryTime.Text = "Прогноз времени работы: " + TimeLeft.ToString();
         }

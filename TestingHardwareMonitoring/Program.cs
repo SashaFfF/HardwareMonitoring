@@ -79,7 +79,31 @@ Console.WriteLine($"CPU temp: {cpu.Temperature}");
 Prognosis p= new Prognosis();
 int count = p.GetCountOfProcesses();
 Console.WriteLine(count);
-Console.WriteLine(p.GetVoltage()); 
+Console.WriteLine(p.GetVoltage());
 
-double sec = p.GetOperatingTimeForecast(100);
-Console.WriteLine(p.TimeConverter(sec));
+//double sec = p.GetOperatingTimeForecast(100);
+//Console.WriteLine(p.TimeConverter(sec));
+//p.GetInfoaboutPr();
+//p.TimeConverter(p.GetOperatingTimeForecastVersion2(100, 15, 60));
+
+TimeForecast2 TimeForecast2= new TimeForecast2();
+
+
+
+
+
+    while (true)
+    {
+    Task.Run(async () =>
+    {
+
+        double seconds = TimeForecast2.GetOperatingTimeForecast(100);
+        Console.Write(TimeForecast2.TimeConverter(seconds));
+        TimeForecast2.CPU.UpdateInfoAsync();
+        TimeForecast2.RAM.UpdateMemoryInfoAsync();
+        await Task.Delay(7000);
+
+    });
+
+}
+
